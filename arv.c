@@ -5,7 +5,7 @@
  */
 
 
-int n;
+int n, valor;
 
 
 
@@ -15,12 +15,19 @@ main(){
 
 	a = criaArv();
 
-	printf("Digite um valor:\n");
-	scanf("%d",&n);
-	a = insereValor(a,n);
+	valor = 0;
+
+	while(valor >=0){
+		printf("Digite um valor:\n");
+		scanf("%d",&valor);
+		if(valor >=0)
+			a = verificaArvore(a,valor);
+
+
+	}
 
 	imprimeArv(a);
-
+	printf("\n");
 	removePonteiro(a);
 
 }
